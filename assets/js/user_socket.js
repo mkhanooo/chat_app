@@ -14,6 +14,8 @@ if (roomId) {
     .join()
     .receive("ok", (resp) => {
       console.log("Joined successfully", resp);
+      console.log(resp)
+      resp.messages.reverse().map(msg => displayMessage(msg))
     })
     .receive("error", (resp) => {
       console.log("Unable to join", resp);

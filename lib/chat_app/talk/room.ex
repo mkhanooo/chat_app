@@ -7,6 +7,7 @@ alias ChatApp.Talk.Room
     field :name, :string
     field :topic, :string
       belongs_to :user, ChatApp.Accounts.User
+      has_many :messages, ChatApp.Talk.Message
     timestamps()
   end
 
