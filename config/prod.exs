@@ -52,8 +52,8 @@ secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 # Configure your database
-config :chat, ChatApp.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
-  ssl: true
+#config :chat, ChatApp.Repo,
+ # adapter: Ecto.Adapters.Postgres,
+  #url: System.get_env("DATABASE_URL"),
+  #pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  #ssl: true
