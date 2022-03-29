@@ -19,8 +19,8 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :chat_app, ChatAppWeb.Endpoint,
-#       ...,
+   config :chat_app, ChatAppWeb.Endpoint,
+
 load_from_system_env: true,
 url: [scheme: "https", host: "phxchatapp.herokuapp.com", port: 443],
 force_ssl: [rewrite_on: [:x_forwarded_proto]],
@@ -57,5 +57,3 @@ config :chat, ChatApp.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
-
- 
