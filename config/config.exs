@@ -12,7 +12,7 @@ config :chat_app,
 
 # Configures the endpoint
 config :chat_app, ChatAppWeb.Endpoint,
-  url: [host: "localhost"],
+url: [scheme: "https", host: "phxchatapp.herokuapp.com", port: 443],
   render_errors: [view: ChatAppWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: ChatApp.PubSub,
   live_view: [signing_salt: "cGd2IDiN"]
